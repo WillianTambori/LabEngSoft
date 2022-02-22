@@ -24,7 +24,7 @@ def main ():
     st.title("O Calculo do tamanho da amostra ")
     st.metric(label="Valor aferido", value=f"{N:.2f}", delta="numero de amostras")
     st.latex(r'''
-    \hat{p}
+    \lparen\hat{p}\rparen\hat{p} 
      ''')
 main()
 
