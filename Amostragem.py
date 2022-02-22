@@ -1,6 +1,6 @@
 import streamlit as st
 
-pop = st.sidebar.number_input('Tamanho da população',key=int)
+pop = st.sidebar.number_input('Tamanho da população',key=int, value = 1.0)
 conf = st.sidebar.slider('Grau de confiança',min_value=80, max_value=99, step=5)
 erro = st.sidebar.number_input('Tamanho da população', key= int, min_value=5)
 
