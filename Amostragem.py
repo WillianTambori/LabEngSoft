@@ -21,6 +21,6 @@ def main ():
     p = porc(st.sidebar.number_input('estimativa de verdadeira proporção (%)', key= int, min_value=10, value=50, max_value=100, step=10, format='%i'))
     N = (n*(z**2)*p*(1-p))/((e**2)*(n-1)+(z**2)*p*(1-p))
     st.title("o numero de amostra é")
-    st.header(n)
+    st.metric(label="Valor aferido", value=N, delta="numero de amostras")
 main()
 
