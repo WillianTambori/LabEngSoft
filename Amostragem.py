@@ -24,7 +24,7 @@ def main ():
     st.title("O Calculo do tamanho da amostra ")
     st.metric(label="Valor aferido", value=f"{N:.2f}", delta="numero de amostras")
     st.latex(r'''
-     \left(\frac{1-r^{n}}{1-r}\right)
+     \left\frac{1-r^{n}}{1-r}\right
      ''')
 main()
 
