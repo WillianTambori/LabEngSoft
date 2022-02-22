@@ -24,7 +24,7 @@ def main ():
     st.title("O Calculo do tamanho da amostra ")
     st.metric(label="Valor aferido", value=f"{N:.2f}", delta="numero de amostras")
     st.latex(r'''
-     a + ar + a r^2 + a r^3 + \cdots + a r^{n-1} =
+     n + nr + a r^2 + a r^3 + \cdots + a r^{n-1} =
      \sum_{k=0}^{n-1} ar^k =
      a \left(\frac{1-r^{n}}{1-r}\right)
      ''')
