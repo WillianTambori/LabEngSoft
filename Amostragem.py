@@ -19,7 +19,7 @@ def main ():
     z = nivel(st.sidebar.slider('Grau de confiança (%)',min_value=80, max_value=99, step=5, format='%i'))
     p = porc(st.sidebar.number_input('Margem de erro (%)', key= float, min_value=1.0, step=0.5, format='%f'))
     e = porc(st.sidebar.number_input('Margem de erro (%)', key= int, min_value=10, value=50, max_value=100, step=10, format='%i'))
-    N = n*(z**2)*p*(1-p)/(e**2)*(n-1)+(z**2)*p*(1-p)
+    N = (n*(z**2)*p*(1-p))/((e**2)*(n-1)+(z**2)*p*(1-p))
     st.write("o numero de amostra é",N)
 main()
 
