@@ -15,9 +15,11 @@ def porc(n):
     e = float(n/100)
     return e
 def main ():
-    pop =  st.sidebar.number_input('Tamanho da população',key=int, min_value=1, step=1, format='%i')
-    conf = nivel(st.sidebar.slider('Grau de confiança (%)',min_value=80, max_value=99, step=5, format='%i'))
-    erro = porc(st.sidebar.number_input('Margem de erro (%)', key= int, min_value=5, format='%i'))
-    st.write("os numeros são ", pop,conf,erro)
+    n =  st.sidebar.number_input('Tamanho da população',key=int, min_value=1, step=1, format='%i')
+    z = nivel(st.sidebar.slider('Grau de confiança (%)',min_value=80, max_value=99, step=5, format='%i'))
+    p = porc(st.sidebar.number_input('Margem de erro (%)', key= int, min_value=5, format='%i'))
+    e = porc(st.sidebar.number_input('Margem de erro (%)', key= int, min_value=10, max_value=100, step=10, format='%i'))
+    N = n*(z**2)*p*(1-p)/(e**2)*(n-1)+(z**2)*p*(1-p)
+    st.write("o numero de amostra é",N)
 main()
 
