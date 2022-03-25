@@ -12,7 +12,7 @@ def nivel(n):
 def porc(n):
     e = float(n/100)
     return e
-def main ():
+def main():
     st.sidebar.title("ADS")
     n =  st.sidebar.number_input('Tamanho da população',key=int, min_value=1, step=1, format='%i')
     z = nivel(st.sidebar.slider('Nível de confiança (%)',min_value=80, max_value=99, step=5, format='%i'))
