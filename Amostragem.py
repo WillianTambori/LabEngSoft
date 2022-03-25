@@ -18,8 +18,8 @@ def main ():
     st.sidebar.title("ADS")
     n =  st.sidebar.number_input('Tamanho da população',key=int, min_value=1, step=1, format='%i')
     z = nivel(st.sidebar.slider('Nível de confiança (%)',min_value=80, max_value=99, step=5, format='%i'))
-    e = porc(st.sidebar.number_input('Margem de erro (%)', key= float, min_value=1.0, max_value=100, step=0.5, format='%f'))
-    p = porc(st.sidebar.number_input('Estimativa de verdadeira proporção (%)', key= int, min_value=10, value=50, max_value=100, step=10, format='%i'))
+    e = (st.sidebar.number_input('Margem de erro (%)', key= float, min_value=1.0, max_value=100, step=0.5, format='%f'))/100
+    p = (st.sidebar.number_input('Estimativa de verdadeira proporção (%)', key= int, min_value=10, value=50, max_value=100, step=10, format='%i'))/100
     N = (n*(z**2)*p*(1-p))/((e**2)*(n-1)+(z**2)*p*(1-p))
     st.title("O Cálculo do tamanho da amostra ")
     st.metric(label="Valor aferido", value=f"{N:.2f}", delta="Número de amostras")
@@ -28,4 +28,3 @@ def main ():
     st.text("Willian Diego Tambori – tambori@fatec.sp.gov.br – RA1570482113002")
    
 main()
-
