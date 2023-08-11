@@ -1,0 +1,17 @@
+nav{
+    display: flex;
+    flex-direction: row;
+}
+div{
+    width: 100px;
+    height: 30px;
+    text-align:center;
+    display: block;
+    padding: 5px;
+    
+
+
+}
+div:hover{
+    color: red;
+}
