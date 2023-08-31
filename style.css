@@ -2,9 +2,9 @@ nav{
     display: flex;
     flex-direction: row;
 }
-div{
-    width: 100px;
-    height: 30px;
+div {
+    width: 200px;
+    height: 200px;
     text-align:center;
     display: block;
     padding: 5px;
