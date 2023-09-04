@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    
+    <title>heranca</title>
+</head>
+<body>
+    <form class="formulario">
+        <h2>Atividade 1</h2>
+        <label id="Nome"> nome: </label>
+        <input id="nome" type="text" >
+        <label id="Sobrenome"> Sobrenome: </label>
+        <input id="sobrenome" type="text">
+        <label id="Email" > Email: </label>
+        <label id="Data"> Data Nascimmento: </label>
+        <input id="email" type="email">
+        <input id="data" type="date">
+        <label id="Matricula">Matricula</label>
+        <label id="opt">apenas uma opção:</label>
+        <input id="matricula" type="text">
+        <label> Aluno
+            <input type="radio" onclick="criar()" id="opt1" name="opt" value="1">    
+        </label>
+        <label> Professor
+            <input type="radio" onclick="criar()" id="opt2" name="opt" value="2" >
+        </label>
+        <button id="botao" onclick="mostrarHeranca()" >enviar</button>
+        <span class="form"></span>
+    </form>
+    <form class="carro">
+        <h2>Atividade 2</h2>
+        <div class="carrin">
+            <input type="text" class="car" id="marca"  placeholder="insisra a marca">
+            <input type="text" class="car" id="modelo" placeholder="insira o modelo">
+            <input type="text" class="car" id="cor" placeholder="insira a cor">
+        </div>
+        <div class="carrin">
+            <input type="text" class="car" id="ano" placeholder="insira o ano">
+            <input type="text" class="car" id="km" placeholder="insira a kilometragem">
+            <input type="text" class="car" id="fipe" placeholder="insira o valor fipe">
+        </div>
+    </form>
+    <div class="form">
+        <button id="botao" onclick="Valorfipe()" >verificar</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
