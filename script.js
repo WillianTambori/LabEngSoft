@@ -261,7 +261,7 @@ function criar(){
     
     }
 }
-/*
+
 function data(){
     const data= new Date();
      let dia = data.getDate();
@@ -306,7 +306,7 @@ function palindromo(){
     return reversa == palavra;
 
 }
-*/
+
 class Carro{
     constructor(marca,modelo,ano,km,fipe,cor){
         this.marca = marca;
