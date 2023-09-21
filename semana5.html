@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adicionando React á minha página</title>
+    <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+<body>
+    <div id="root"></div>
+    <script type="text/babel" >
+        function MeuElemento({agora}){
+            return <h1> {agora}</h1>
+        }
+        const container = document.getElementById('root');
+        const root = ReactDOM.createRoot(container);
+        //root.render(<MeuElemento agora = {letreiro} />);
+        let contador= 0;
+        let array = ["V","e","n","h","a"," ","E","s","t","u","d","a","r"," ","n","a"," ","F","a","t","e","c"];
+        let letreiro=" ";
+        function tick(){
+            letreiro += array[contador];
+            root.render(<MeuElemento agora = {letreiro} />);
+            contador++;
+            if (array[contador] == undefined ){
+                letreiro = "";
+                contador = 0;
+            }
+            
+        }
+        setInterval(tick,250);    
+           
+            //ReactDOM.render(<Elemento />,document.getElementById('root'));
+            
+    </script>
+    
+</body>
+</html>
